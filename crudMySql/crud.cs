@@ -28,6 +28,16 @@ namespace MetroSetUi
         }
         ProdutoDTO objProdutoDTO = new ProdutoDTO();
         ProdutoBLL objProdutoBLL = new ProdutoBLL();
-        
+        //FornecedorBLL objFornBLL = new FornecedorBLL();
+        //CategoriaBLL objCategBLL = new CategoriaBLL();
+        private void carregar_dgv()
+        {
+            dataGridView1.DataSource = objProdutoBLL.ListarProdutos();
+        }
+        private void carregar_categora()
+        {
+            cbx_categoria.DataSource = objCategBLL.ListarCategorias();
+        }
+
     }
 }
