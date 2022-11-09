@@ -44,12 +44,6 @@
 ![MetroUI](https://img.shields.io/badge/-MetroUi-004880?&logo=nuget&logoColor=ffffff)
 ![My Sql](https://img.shields.io/badge/-MySql-4479A1?&logo=mysql&logoColor=ffffff)
 
-###
-
-## Acesso ao projeto
-
-Você pode [acessar o código fonte do projeto](https://github.com/camilafernanda/GlicoCare) ou [baixá-lo](https://github.com/camilafernanda/GlicoCare/archive/refs/heads/main.zip).
-
 ## Abrir e rodar o projeto
 
 Após baixar o projeto, você pode abrir com o `Visual Studio`. Para isso, abra a pasta baixada e:
