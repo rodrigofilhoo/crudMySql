@@ -233,6 +233,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(303, 293);
             this.dataGridView1.TabIndex = 9;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // btn_salvar
             // 
@@ -250,6 +251,7 @@
             this.btn_excluir.Size = new System.Drawing.Size(91, 43);
             this.btn_excluir.TabIndex = 9;
             this.btn_excluir.Text = "Excluir";
+            this.btn_excluir.Click += new System.EventHandler(this.btn_excluir_Click);
             // 
             // btn_limpar
             // 

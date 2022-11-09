@@ -22,7 +22,7 @@ namespace MetroSetUi
 
         private void crud_Load(object sender, EventArgs e)
         {
-            carregar_categora();
+            carregar_categoria();
             carregar_fornecedor();
             carregar_dgv();
         }
@@ -34,7 +34,7 @@ namespace MetroSetUi
         {
             dataGridView1.DataSource = objProdutoBLL.ListarProdutos();
         }
-        private void carregar_categora()
+        private void carregar_categoria()
         {
             cbx_categoria.DataSource = objCategBLL.ListarCategorias();
             cbx_categoria.DisplayMember = "descricao";
@@ -72,15 +72,52 @@ namespace MetroSetUi
                 objProdutoDTO.Tbl_categoria_id = Convert.ToInt32(cbx_categoria.SelectedValue);
                 objProdutoDTO.Tbl_fornecedor_id = Convert.ToInt32(cbx_fornecedor.SelectedValue);
 
-                if (txt_produto.Text = "")
+                if (txt_produto.Text == "")
                 {
-
+                    objProdutoBLL.InserirProduto(objProdutoDTO);
+                    MessageBox.Show("Produto inserido com sucesso!");
                 }
+                else
+                {
+                    objProdutoDTO.Id = int.Parse(txt_produto.Text);
+                    objProdutoBLL.alterar_produto(objProdutoDTO);
+                    MessageBox.Show("Dados foram atualizados com sucesso!");
+                }
+                carregar_dgv();
+                LimparComponentes();
             }
-            catch
+            catch (Exception ex)
             {
-
+                MessageBox.Show("ERRO!\n" + ex.Message, "Erro!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void btn_excluir_Click(object sender, EventArgs e)
+        {
+            if (txt_produto.Text != "")
+            {
+                objProdutoDTO.Id = int.Parse(txt_produto.Text);
+                objProdutoBLL.ExcluirProduto(objProdutoDTO);
+                MessageBox.Show("O produto foi excluido.", "Sucesso!");
+                carregar_dgv();
+                LimparComponentes();
+            }
+            else
+            {
+                MessageBox.Show("Selecione um produto para ser exluido.", "Erro!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            txt_produto.Text = dataGridView1.Rows[e.RowIndex].Cells["id"].Value.ToString();
+            txt_descricao.Text = dataGridView1.Rows[e.RowIndex].Cells["descricao"].Value.ToString();
+            txt_preco.Text = dataGridView1.Rows[e.RowIndex].Cells["preco"].Value.ToString();
+            txt_quantidade.Text = dataGridView1.Rows[e.RowIndex].Cells["quantidade"].Value.ToString();
+            txt_peso.Text = dataGridView1.Rows[e.RowIndex].Cells["peso"].Value.ToString();
+            cbx_categoria.SelectedValue = dataGridView1.Rows[e.RowIndex].Cells["tbl_categoria_id"].Value.ToString();
+            cbx_fornecedor.SelectedValue = dataGridView1.Rows[e.RowIndex].Cells["tbl_fornecedor_id"].Value.ToString();
         }
     }
 }
+
