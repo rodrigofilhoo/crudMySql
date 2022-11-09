@@ -52,4 +52,6 @@ Após baixar o projeto, você pode abrir com o `Visual Studio`. Para isso, abra 
 - Abra o arquivo `bd.sql` e execute o script sql;
 - Por fim clique em `iniciar` no Visual Studio.
 
-O `Visual Studio` funcinar perfeitamente.
+- O `Visual Studio` funcinar perfeitamente.
+##To Do
+- Sistema de login e cadastro;
