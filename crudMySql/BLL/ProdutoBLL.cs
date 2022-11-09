@@ -29,6 +29,18 @@ namespace crudMySql.BLL
             string sql = $"delete from {tabela} where id = {objDTO.Id}";
             objDAL.ExecutarComando(sql);
         }
+        public void alterar_produto(ProdutoDTO objDTO)
+        {
+            string sql = String.Format($@"update {tabela}
+                            set descricao         = '{objDTO.Descricao}'
+                                preco             = '{objDTO.Preco}'
+                                quantidade        = '{objDTO.Quantidade}'
+                                peso              = '{objDTO.Peso}'
+                                tbl_categoria_id  = '{objDTO.Tbl_categoria_id}'
+                                tbl_fornecedor_id = '{objDTO.Tbl_fornecedor_id}'
+                            where id = '{objDTO.Id}';");
+            objDAL.ExecutarComando(sql);
+        }
         public DataTable ListarProdutos(string condicao)
         {
             string pesquisa = $"select * from {tabela} where {condicao};";
