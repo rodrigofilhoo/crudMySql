@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MetroSet_UI.Forms;
+using crudMySql.DTO;
+using crudMySql.BLL;
 
 namespace MetroSetUi
 {
@@ -17,6 +19,15 @@ namespace MetroSetUi
         {
             InitializeComponent();
         }
-        private void crud_Load();
+
+        private void crud_Load(object sender, EventArgs e)
+        {
+            carregar_categora();
+            carregar_fornecedor();
+            carregar_dgv();
+        }
+        ProdutoDTO objProdutoDTO = new ProdutoDTO();
+        ProdutoBLL objProdutoBLL = new ProdutoBLL();
+        
     }
 }

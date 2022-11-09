@@ -288,6 +288,7 @@
             this.Padding = new System.Windows.Forms.Padding(13, 71, 13, 11);
             this.SmallLineColor1 = System.Drawing.Color.White;
             this.SmallLineColor2 = System.Drawing.Color.White;
+            this.Load += new System.EventHandler(this.crud_Load);
             this.metroPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
