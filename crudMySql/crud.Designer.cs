@@ -49,6 +49,8 @@
             this.btn_salvar = new MetroFramework.Controls.MetroButton();
             this.btn_excluir = new MetroFramework.Controls.MetroButton();
             this.btn_limpar = new MetroFramework.Controls.MetroButton();
+            this.metroLabel7 = new MetroFramework.Controls.MetroLabel();
+            this.txt_descricao = new MetroFramework.Controls.MetroTextBox();
             this.metroPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -94,7 +96,7 @@
             this.txt_produto.Location = new System.Drawing.Point(24, 71);
             this.txt_produto.Name = "txt_produto";
             this.txt_produto.Size = new System.Drawing.Size(149, 23);
-            this.txt_produto.TabIndex = 3;
+            this.txt_produto.TabIndex = 1;
             // 
             // metroLabel2
             // 
@@ -119,7 +121,7 @@
             this.txt_preco.Location = new System.Drawing.Point(24, 126);
             this.txt_preco.Name = "txt_preco";
             this.txt_preco.Size = new System.Drawing.Size(149, 23);
-            this.txt_preco.TabIndex = 3;
+            this.txt_preco.TabIndex = 2;
             // 
             // metroLabel4
             // 
@@ -151,7 +153,7 @@
             this.txt_peso.Location = new System.Drawing.Point(24, 236);
             this.txt_peso.Name = "txt_peso";
             this.txt_peso.Size = new System.Drawing.Size(149, 23);
-            this.txt_peso.TabIndex = 3;
+            this.txt_peso.TabIndex = 4;
             // 
             // metroPanel1
             // 
@@ -237,15 +239,16 @@
             this.btn_salvar.Location = new System.Drawing.Point(24, 310);
             this.btn_salvar.Name = "btn_salvar";
             this.btn_salvar.Size = new System.Drawing.Size(91, 43);
-            this.btn_salvar.TabIndex = 10;
+            this.btn_salvar.TabIndex = 8;
             this.btn_salvar.Text = "Salvar";
+            this.btn_salvar.Click += new System.EventHandler(this.btn_salvar_Click);
             // 
             // btn_excluir
             // 
             this.btn_excluir.Location = new System.Drawing.Point(121, 310);
             this.btn_excluir.Name = "btn_excluir";
             this.btn_excluir.Size = new System.Drawing.Size(91, 43);
-            this.btn_excluir.TabIndex = 10;
+            this.btn_excluir.TabIndex = 9;
             this.btn_excluir.Text = "Excluir";
             // 
             // btn_limpar
@@ -255,6 +258,23 @@
             this.btn_limpar.Size = new System.Drawing.Size(91, 43);
             this.btn_limpar.TabIndex = 10;
             this.btn_limpar.Text = "Limpar";
+            this.btn_limpar.Click += new System.EventHandler(this.btn_limpar_Click);
+            // 
+            // metroLabel7
+            // 
+            this.metroLabel7.AutoSize = true;
+            this.metroLabel7.Location = new System.Drawing.Point(226, 159);
+            this.metroLabel7.Name = "metroLabel7";
+            this.metroLabel7.Size = new System.Drawing.Size(65, 19);
+            this.metroLabel7.TabIndex = 2;
+            this.metroLabel7.Text = "Descrição";
+            // 
+            // txt_descricao
+            // 
+            this.txt_descricao.Location = new System.Drawing.Point(230, 181);
+            this.txt_descricao.Name = "txt_descricao";
+            this.txt_descricao.Size = new System.Drawing.Size(149, 23);
+            this.txt_descricao.TabIndex = 7;
             // 
             // crud
             // 
@@ -271,10 +291,12 @@
             this.Controls.Add(this.cbx_categoria);
             this.Controls.Add(this.metroPanel1);
             this.Controls.Add(this.txt_peso);
+            this.Controls.Add(this.txt_descricao);
             this.Controls.Add(this.txt_quantidade);
             this.Controls.Add(this.txt_preco);
             this.Controls.Add(this.metroLabel5);
             this.Controls.Add(this.txt_produto);
+            this.Controls.Add(this.metroLabel7);
             this.Controls.Add(this.metroLabel4);
             this.Controls.Add(this.metroLabel2);
             this.Controls.Add(this.metroLabel6);
@@ -319,6 +341,8 @@
         private MetroFramework.Controls.MetroButton btn_salvar;
         private MetroFramework.Controls.MetroButton btn_excluir;
         private MetroFramework.Controls.MetroButton btn_limpar;
+        private MetroFramework.Controls.MetroLabel metroLabel7;
+        private MetroFramework.Controls.MetroTextBox txt_descricao;
     }
 }
 

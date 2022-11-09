@@ -41,6 +41,10 @@ namespace crudMySql.BLL
                             where id = '{objDTO.Id}';");
             objDAL.ExecutarComando(sql);
         }
+        public DataTable ListarProdutos()
+        {
+            return objDAL.ExecutarConsulta($"select * from {tabela} order by descricao;");
+        }
         public DataTable ListarProdutos(string condicao)
         {
             string pesquisa = $"select * from {tabela} where {condicao};";
