@@ -53,7 +53,6 @@ Após baixar o projeto, você pode abrir com o `Visual Studio`. Para isso, abra 
 - Por fim clique em `iniciar` no Visual Studio;
 - O `Visual Studio` funcinar perfeitamente.
 
-###
+## To Do
 
-##To Do
 - Sistema de login e cadastro;
