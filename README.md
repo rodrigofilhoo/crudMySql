@@ -19,8 +19,8 @@
 ## Descrição do projeto 
 
 <p align="justify">
- Projeto feito após aprendisado da matéria na escola e matéria de prova
-  Se resume um um CRUD feito co conexão a um banco de dados
+ Projeto feito após aprendisado da matéria na escola e matéria de prova </br>
+ se resume um um CRUD feito co conexão a um banco de dados
 </p>
 
 ## Funcionalidades
