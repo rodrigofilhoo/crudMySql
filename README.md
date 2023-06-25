@@ -1,7 +1,7 @@
 # crudMySql
 
 <p align="center">
-   <img src="http://img.shields.io/static/v1?label=STATUS&message=EM%20DESENVOLVIMENTO&color=RED&style=for-the-badge" #vitrinedev/>
+   <img src="http://img.shields.io/static/v1?label=STATUS&message=CONCLUÍDO&color=RED&style=for-the-badge" #vitrinedev/>
 </p>
 
 ### Tópicos 
@@ -51,7 +51,7 @@ Após baixar o projeto, você pode abrir com o `Visual Studio`. Para isso, abra 
 - Clique em `crudMySql.sln`;
 - Abra o arquivo `bd.sql` e execute o script sql;
 - Por fim clique em `iniciar` no Visual Studio;
-- O `Visual Studio` funcinar perfeitamente.
+- O `Visual Studio` deve funcinar perfeitamente.
 
 ## To Do
 
